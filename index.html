@@ -95,7 +95,7 @@ h1{
 .text{
     line-height:1.8;
     font-size:1.2rem;
-    white-space:pre-wrap; /* CAMBIO: "pre-wrap" para que respete bien los saltos de línea de la máquina de escribir */
+    white-space:pre-wrap;
 }
 
 .signature{
@@ -124,13 +124,14 @@ h1{
 
     <h1>Feliz cumpleaños Lalis 🫶🏼</h1>
 
-    <img src="foto.jpg" alt="Nosotros">
+    <!-- Ya configuré el nombre exacto de tu foto aquí abajo -->
+    <img src="D1C06803-EBBB-4AE4-AE08-79AA8CE6DA54.png" alt="Nosotros">
 
     <div class="text" id="mensaje"></div>
 
     <div class="spotify">
         <iframe style="border-radius:12px"
-        src="https://open.spotify.com/embed/track/4PTG3Z6ehGkBF3zI7YmNoS?utm_source=generator"
+        src="http://googleusercontent.com/spotify.com/5"
         width="100%"
         height="152"
         frameborder="0"
@@ -160,11 +161,10 @@ Ojalá sigas cumpliendo muchísimos años más y poder estar contigo ❤️🥳
 
 felichidadesh`;
 
-let yaEscribio = false; // Evita que se duplique el texto si se presiona dos veces
+let yaEscribio = false;
 
 function abrirRegalo(){
     document.getElementById("inicio").style.display="none";
-    document.getElementById("contenido").style.style.display="none"; // Limpieza
     document.getElementById("contenido").style.display="block";
     if(!yaEscribio){
         escribirTexto();
@@ -176,7 +176,7 @@ function escribirTexto(){
     let i=0;
     let velocidad=35;
     const contenedor = document.getElementById("mensaje");
-    contenedor.innerHTML = ""; // Limpia el contenedor antes de empezar
+    contenedor.innerHTML = "";
 
     function escribir(){
         if(i < texto.length){
@@ -186,6 +186,7 @@ function escribirTexto(){
         }
     }
 
+    document.title = "Para Lalis ❤️";
     escribir();
 }
 
